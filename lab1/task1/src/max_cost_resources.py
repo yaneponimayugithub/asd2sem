@@ -25,7 +25,6 @@ def max_cost_items(n, W, items):
 if __name__ == '__main__':
     @utils.measure_time_and_memory
     def task():
-        result = []
         lines = utils.read_input(input_path)
         n, W = map(int, lines[0].split())
         items = [list(map(int, line.split())) for line in lines[1:]]
