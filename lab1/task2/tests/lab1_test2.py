@@ -18,7 +18,7 @@ class MyTestCase(unittest.TestCase):
         # then
         self.assertEqual(result, expected_data)
 
-    def test_should_max_cost_resources_time_and_hard(self):
+    def test_should_max_cost_resources_time_hard(self):
         # given
         dist = 10**5
         full_fuel = random.randint(0,400)
@@ -42,7 +42,7 @@ class MyTestCase(unittest.TestCase):
         self.assertLess(elapsed_time, max_time,
                         f"[lab - {filename[3]} | task - {filename[9]} ] Время работы слишком долго: {elapsed_time:.8f} секунд")
 
-    def test_should_max_cost_resources_time_and_easy(self):
+    def test_should_max_cost_resources_time_easy(self):
         # given
         dist = 10 ** 3
         full_fuel = random.randint(0, 40)
