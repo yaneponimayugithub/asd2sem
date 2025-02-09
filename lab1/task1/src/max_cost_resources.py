@@ -15,7 +15,6 @@ def max_cost_items(n, W, items):
             # Если весь предмет помещается в рюкзак
             W -= weight
             finish_cost += value
-            print(W,finish_cost)
         else:
             # Если можем взять только часть предмета
             finish_cost += value * (W / weight)
