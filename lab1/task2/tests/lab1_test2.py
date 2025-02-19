@@ -7,7 +7,7 @@ filename = os.path.basename(__file__)
 
 
 class MyTestCase(unittest.TestCase):
-    def test_should_max_cost_resources(self):
+    def test_should_count_stations(self):
         # given
         data = 1240, 320,7, [200,500,630,650,750,1000,1005]
         expected_data = 4
@@ -18,7 +18,7 @@ class MyTestCase(unittest.TestCase):
         # then
         self.assertEqual(result, expected_data)
 
-    def test_should_max_cost_resources_time_hard(self):
+    def test_should_count_stations_time_hard(self):
         # given
         dist = 10**5
         full_fuel = random.randint(0,400)
@@ -42,7 +42,7 @@ class MyTestCase(unittest.TestCase):
         self.assertLess(elapsed_time, max_time,
                         f"[lab - {filename[3]} | task - {filename[9]} ] Время работы слишком долго: {elapsed_time:.8f} секунд")
 
-    def test_should_max_cost_resources_time_easy(self):
+    def test_should_count_stations_time_easy(self):
         # given
         dist = 10 ** 3
         full_fuel = random.randint(0, 40)
