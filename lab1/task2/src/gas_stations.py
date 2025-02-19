@@ -10,6 +10,7 @@ def count_gas_stations(distance: int, distance_on_full_fuel: int, count_gas_stat
 
     if dist_gas_stations[-1] + distance_on_full_fuel < distance: return -1  # проверка на возможность проезда назначенной пути
 
+    if count_gas_stations == 0 and distance > distance_on_full_fuel: return -1 # если заправок 0 и нельзя проехать на фулл баке
     numRefills = 0  # количество заправок
     current_gas_station = 0  # начальная станция
 
