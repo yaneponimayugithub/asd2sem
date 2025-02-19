@@ -3,25 +3,6 @@ import lab1.utils as utils
 
 input_path, output_path = utils.get_file_paths(os.path.abspath(__file__))
 
-def alisa_apple_eat(height:int,apples:list):
-    sorted_apples = apples.copy()
-    sorted_apples.sort(key=lambda apple_params: apple_params[1] - apple_params[0], reverse=True)   # сортируем в самом выгодном порядке
-                                                                                            # чтобы максимально избежать неположительного роста
-    order_apples = []
-    print(apples)
-
-
-
-    while len(order_apples) != len(apples):
-        for idx in range(len(sorted_apples)):
-            if height - sorted_apples[idx][0] > 0 and idx not in order_apples:
-                height += sorted_apples[idx][1] - sorted_apples[idx][0]
-                order_apples.append(apples.index(sorted_apples[idx]))
-                break
-        else: return -1
-    return order_apples
-
-
 def alisa_apple_eat(height: int, apples: list):
     sorted_apples = sorted(apples, key=lambda apple_params: apple_params[1] - apple_params[0], reverse=True)# сортируем в самом выгодном порядке
                                                                                             # чтобы максимально избежать неположительного роста
